@@ -24,7 +24,7 @@ public class PerformOperations {
     public String performAuth() throws Exception{
         baseURI = cr.getBaseURI();
         System.out.println(baseURI);
-        Response response = given().header("Authorization","Basic "+"WXJmQmVUSHJNVUN1U0Q0a2RBTUJGNjlXWDoxMFhiZWxiNmZ0SXNucU5WdnVrUEkxQndiTDlubjJRbm9YMFFoZWV0U1lvMHQzMmhKOA==")
+        Response response = given().header("Authorization","Basic "+"<put your auth token here>")
                 .and().header("contentType", "application/x-www-form-urlencoded;charset=UTF-8")
                 .and().param("grant_type","client_credentials")
                 .when().post("/oauth2/token").then().extract().response();
